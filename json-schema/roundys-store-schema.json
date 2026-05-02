@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.roundys.com/schemas/store.json",
+  "title": "Roundy's Store Data Schema",
+  "description": "Schema for Roundy's grocery store data including Pick 'n Save, Metro Market, and Mariano's store locations, departments, services, and product catalog as surfaced through the Kroger Developer Platform APIs.",
+  "type": "object",
+  "$defs": {
+    "GeoCoordinates": {
+      "type": "object",
+      "title": "GeoCoordinates",
+      "properties": {
+        "latitude": { "type": "number", "description": "Store latitude coordinate" },
+        "longitude": { "type": "number", "description": "Store longitude coordinate" }
+      }
+    },
+    "StoreAddress": {
+      "type": "object",
+      "title": "StoreAddress",
+      "properties": {
+        "addressLine1": { "type": "string", "description": "Street address" },
+        "addressLine2": { "type": "string", "description": "Suite, unit, or additional address info" },
+        "city": { "type": "string", "description": "City name" },
+        "state": { "type": "string", "description": "State abbreviation" },
+        "zipCode": { "type": "string", "description": "ZIP code" },
+        "county": { "type": "string", "description": "County name" }
+      }
+    },
+    "StoreHours": {
+      "type": "object",
+      "title": "StoreHours",
+      "properties": {
+        "day": {
+          "type": "string",
+          "enum": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        },
+        "open": { "type": "string", "description": "Opening time in HH:MM format", "pattern": "^[0-2][0-9]:[0-5][0-9]$" },
+        "close": { "type": "string", "description": "Closing time in HH:MM format", "pattern": "^[0-2][0-9]:[0-5][0-9]$" }
+      }
+    },
+    "Store": {
+      "type": "object",
+      "title": "Store",
+      "description": "A Roundy's grocery store location (Pick 'n Save, Metro Market, or Mariano's)",
+      "required": ["locationId", "name", "banner", "address"],
+      "properties": {
+        "locationId": {
+          "type": "string",
+          "description": "Unique Kroger location identifier for the store"
+        },
+        "name": {
+          "type": "string",
+          "description": "Store display name"
+        },
+        "banner": {
+          "type": "string",
+          "description": "Retail banner",
+          "enum": ["Pick 'n Save", "Metro Market", "Mariano's"]
+        },
+        "divisionNumber": {
+          "type": "string",
+          "description": "Kroger division number"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Store phone number",
+          "pattern": "^[0-9]{10}$"
+        },
+        "address": { "$ref": "#/$defs/StoreAddress" },
+        "geolocation": { "$ref": "#/$defs/GeoCoordinates" },
+        "hours": {
+          "type": "array",
+          "description": "Store operating hours by day of week",
+          "items": { "$ref": "#/$defs/StoreHours" }
+        },
+        "departments": {
+          "type": "array",
+          "description": "Departments available in this store",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Bakery",
+              "Deli",
+              "Floral",
+              "Fuel Center",
+              "Grocery",
+              "Meat",
+              "Natural and Organic",
+              "Pharmacy",
+              "Produce",
+              "Seafood",
+              "Wine Beer and Spirits"
+            ]
+          }
+        },
+        "services": {
+          "type": "array",
+          "description": "Services available at this store",
+          "items": {
+            "type": "string",
+            "enum": ["Pickup", "Delivery", "MoneyServices", "RedBox", "WesternUnion"]
+          }
+        }
+      }
+    },
+    "Product": {
+      "type": "object",
+      "title": "Product",
+      "description": "A grocery product available at Roundy's stores via the Kroger product catalog API",
+      "required": ["productId"],
+      "properties": {
+        "productId": {
+          "type": "string",
+          "description": "Kroger unique product identifier"
+        },
+        "upc": {
+          "type": "string",
+          "description": "Universal Product Code",
+          "pattern": "^[0-9]{12,13}$"
+        },
+        "brand": {
+          "type": "string",
+          "description": "Product brand name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Product display name"
+        },
+        "aisleLocations": {
+          "type": "array",
+          "description": "Aisle location(s) in store",
+          "items": {
+            "type": "object",
+            "properties": {
+              "bayNumber": { "type": "string" },
+              "description": { "type": "string" },
+              "number": { "type": "string" },
+              "side": { "type": "string" }
+            }
+          }
+        },
+        "categories": {
+          "type": "array",
+          "description": "Product category hierarchy",
+          "items": { "type": "string" }
+        },
+        "images": {
+          "type": "array",
+          "description": "Product images",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "perspective": { "type": "string", "enum": ["front", "back", "left", "right", "top", "ingredient"] },
+              "default": { "type": "boolean" },
+              "sizes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string", "enum": ["thumbnail", "small", "medium", "large", "xlarge"] },
+                    "url": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "description": "Price and availability details per store",
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemId": { "type": "string" },
+              "favorite": { "type": "boolean" },
+              "fulfillment": {
+                "type": "object",
+                "properties": {
+                  "curbside": { "type": "boolean" },
+                  "delivery": { "type": "boolean" },
+                  "inStore": { "type": "boolean" },
+                  "shipToHome": { "type": "boolean" }
+                }
+              },
+              "price": {
+                "type": "object",
+                "properties": {
+                  "regular": { "type": "number" },
+                  "promo": { "type": "number" }
+                }
+              },
+              "size": { "type": "string" },
+              "soldBy": { "type": "string", "enum": ["UNIT", "WEIGHT"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "stores": {
+      "type": "array",
+      "description": "List of Roundy's store locations",
+      "items": { "$ref": "#/$defs/Store" }
+    },
+    "products": {
+      "type": "array",
+      "description": "Product catalog entries",
+      "items": { "$ref": "#/$defs/Product" }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "RoundysStoreData",
+  "description": "Data structures for Roundy's grocery store information, product catalog, and customer interactions as surfaced through the Kroger Developer Platform APIs for Pick 'n Save, Metro Market, and Mariano's stores",
+  "fields": [
+    {
+      "name": "store",
+      "type": "object",
+      "description": "A Roundy's grocery store location",
+      "fields": [
+        { "name": "locationId", "type": "string", "description": "Unique Kroger location identifier", "required": true },
+        { "name": "name", "type": "string", "description": "Store display name", "required": true },
+        { "name": "banner", "type": "string", "description": "Retail banner: Pick 'n Save, Metro Market, Mariano's", "required": true },
+        { "name": "divisionNumber", "type": "string", "description": "Kroger division number" },
+        { "name": "phone", "type": "string", "description": "Store phone number" },
+        {
+          "name": "address",
+          "type": "object",
+          "description": "Physical store address",
+          "fields": [
+            { "name": "addressLine1", "type": "string", "description": "Street address" },
+            { "name": "city", "type": "string", "description": "City" },
+            { "name": "state", "type": "string", "description": "State abbreviation" },
+            { "name": "zipCode", "type": "string", "description": "ZIP code" }
+          ]
+        },
+        {
+          "name": "geolocation",
+          "type": "object",
+          "description": "Geographic coordinates",
+          "fields": [
+            { "name": "latitude", "type": "number", "description": "Latitude" },
+            { "name": "longitude", "type": "number", "description": "Longitude" }
+          ]
+        },
+        { "name": "hours", "type": "array", "description": "Operating hours by day of week" },
+        { "name": "departments", "type": "array", "description": "Available departments (Bakery, Deli, Pharmacy, etc.)" },
+        { "name": "services", "type": "array", "description": "Available services (Pickup, Delivery, etc.)" }
+      ]
+    },
+    {
+      "name": "product",
+      "type": "object",
+      "description": "A grocery product in the Roundy's/Kroger product catalog",
+      "fields": [
+        { "name": "productId", "type": "string", "description": "Kroger unique product ID", "required": true },
+        { "name": "upc", "type": "string", "description": "Universal Product Code" },
+        { "name": "brand", "type": "string", "description": "Brand name" },
+        { "name": "description", "type": "string", "description": "Product display name" },
+        { "name": "aisleLocations", "type": "array", "description": "In-store aisle location information" },
+        { "name": "categories", "type": "array", "description": "Product category hierarchy" },
+        { "name": "images", "type": "array", "description": "Product images in various sizes and perspectives" },
+        {
+          "name": "items",
+          "type": "array",
+          "description": "Store-specific pricing, size, and fulfillment data",
+          "fields": [
+            { "name": "itemId", "type": "string", "description": "Item ID for this size/package" },
+            { "name": "price", "type": "object", "description": "Regular and promotional pricing" },
+            { "name": "size", "type": "string", "description": "Package size description" },
+            { "name": "soldBy", "type": "string", "description": "UNIT or WEIGHT" },
+            { "name": "fulfillment", "type": "object", "description": "Available fulfillment methods" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "loyaltyAccount",
+      "type": "object",
+      "description": "A Roundy's Plus Card loyalty account",
+      "fields": [
+        { "name": "cardNumber", "type": "string", "description": "Plus Card number" },
+        { "name": "customerId", "type": "string", "description": "Kroger customer ID" },
+        { "name": "fuelPoints", "type": "integer", "description": "Accumulated fuel reward points" },
+        { "name": "clippedCoupons", "type": "array", "description": "Digital coupons clipped to account" }
+      ]
+    }
+  ]
+}

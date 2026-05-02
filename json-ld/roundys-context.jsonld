@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "roundys": "https://www.roundys.com/vocab/",
+    "schema": "https://schema.org/",
+    "gs1": "https://www.gs1.org/voc/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Roundys": {
+      "@id": "roundys:Roundys",
+      "@type": "schema:Organization",
+      "@context": {
+        "name": { "@id": "schema:name" },
+        "description": { "@id": "schema:description" },
+        "parentOrganization": { "@id": "schema:parentOrganization" },
+        "foundingDate": { "@id": "schema:foundingDate" },
+        "location": { "@id": "schema:location" },
+        "numberOfLocations": { "@id": "roundys:numberOfLocations" }
+      }
+    },
+
+    "GroceryStore": {
+      "@id": "schema:GroceryOrSupermarket",
+      "@context": {
+        "name": { "@id": "schema:name" },
+        "banner": { "@id": "roundys:banner" },
+        "storeNumber": { "@id": "roundys:storeNumber" },
+        "address": { "@id": "schema:address" },
+        "geo": { "@id": "schema:geo" },
+        "openingHours": { "@id": "schema:openingHours" },
+        "telephone": { "@id": "schema:telephone" },
+        "departments": { "@id": "roundys:departments" },
+        "services": { "@id": "schema:availableService" }
+      }
+    },
+
+    "GroceryProduct": {
+      "@id": "schema:Product",
+      "@context": {
+        "name": { "@id": "schema:name" },
+        "description": { "@id": "schema:description" },
+        "brand": { "@id": "schema:brand" },
+        "upc": { "@id": "gs1:gtin" },
+        "category": { "@id": "schema:category" },
+        "price": { "@id": "schema:price" },
+        "priceCurrency": { "@id": "schema:priceCurrency" },
+        "image": { "@id": "schema:image" }
+      }
+    },
+
+    "LoyaltyProgram": {
+      "@id": "schema:LoyaltyProgram",
+      "@context": {
+        "name": { "@id": "schema:name" },
+        "memberOf": { "@id": "schema:memberOf" },
+        "cardNumber": { "@id": "roundys:cardNumber" },
+        "points": { "@id": "roundys:loyaltyPoints" },
+        "fuelPoints": { "@id": "roundys:fuelPoints" }
+      }
+    },
+
+    "ShoppingCart": {
+      "@id": "schema:Cart",
+      "@context": {
+        "items": { "@id": "schema:itemListElement" },
+        "totalPrice": { "@id": "schema:totalPrice" },
+        "storeId": { "@id": "roundys:storeId" }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+name: Roundy's Vocabulary
+description: >-
+  Vocabulary and taxonomy for Roundy's grocery operations and the Kroger
+  developer platform as it applies to the Pick 'n Save, Metro Market, and
+  Mariano's retail banners, covering grocery retail, loyalty programs,
+  digital commerce, and supply chain concepts.
+created: '2026-05-02'
+modified: '2026-05-02'
+terms:
+  - term: Roundy's
+    definition: >-
+      A Midwest grocery retailer and wholly-owned Kroger subsidiary founded
+      in Milwaukee, Wisconsin in 1872, operating approximately 150 grocery
+      stores across Wisconsin and Illinois under the Pick 'n Save, Metro Market,
+      and Mariano's banners.
+    tags:
+      - Core
+      - Company
+  - term: Pick 'n Save
+    definition: >-
+      Roundy's primary Wisconsin grocery banner with over 100 store locations
+      throughout the state, offering a full-service supermarket format with
+      pharmacy, fuel, and click-and-collect services.
+    tags:
+      - Retail Banner
+  - term: Metro Market
+    definition: >-
+      Roundy's premium Wisconsin grocery banner operating specialty
+      supermarkets in the Milwaukee metro area and other Wisconsin
+      communities, emphasizing fresh departments, specialty foods, and
+      prepared meals.
+    tags:
+      - Retail Banner
+  - term: Mariano's
+    definition: >-
+      Roundy's Illinois grocery banner operating 44 Fresh Market-format stores
+      throughout the Chicago metropolitan area, acquired by Roundy's in 2010
+      and continuing under the Mariano's name after the Kroger acquisition.
+    tags:
+      - Retail Banner
+  - term: Kroger Developer Platform
+    definition: >-
+      The Kroger Co.'s developer API platform providing partner, private,
+      and public APIs for product catalog, store location, cart, identity,
+      and loyalty integrations applicable to all Kroger-family banners
+      including Roundy's stores.
+    tags:
+      - Technology
+      - API
+  - term: Plus Card
+    definition: >-
+      The Roundy's/Kroger loyalty card program providing customers with
+      discounts, digital coupons, fuel points, and personalized offers
+      at Pick 'n Save, Metro Market, and Mariano's stores.
+    tags:
+      - Loyalty
+  - term: Digital Coupon
+    definition: >-
+      Electronic coupons available through the Pick 'n Save, Metro Market,
+      and Mariano's apps and websites that customers clip to their Plus Card
+      account and redeem automatically at checkout, integrated via the
+      Kroger identity and loyalty APIs.
+    tags:
+      - Loyalty
+      - Digital Commerce
+  - term: Click and Collect
+    definition: >-
+      Roundy's online grocery ordering service (also called pickup) where
+      customers order groceries online through the Pick 'n Save or Mariano's
+      app and pick up their order at a designated store location.
+    tags:
+      - Digital Commerce
+      - Fulfillment
+  - term: Grocery Department
+    definition: >-
+      A functional section within a Roundy's store, such as Produce, Bakery,
+      Deli, Meat, Seafood, Pharmacy, or Natural/Organic, used in store locator
+      and product catalog API responses to indicate available services.
+    tags:
+      - Store Operations
+  - term: UPC
+    definition: >-
+      Universal Product Code — the barcode identifier used in Roundy's and
+      Kroger product catalog APIs to uniquely identify consumer packaged
+      goods. Used as a primary key in the Kroger product search and lookup APIs.
+    tags:
+      - Product Data
+  - term: Fuel Points
+    definition: >-
+      A loyalty program component where Roundy's customers earn points on
+      grocery purchases redeemable for fuel discounts at participating Kroger
+      fuel centers. Integrated through the Kroger loyalty API.
+    tags:
+      - Loyalty
+  - term: Kroger Identity
+    definition: >-
+      The unified customer identity and authentication system shared across
+      all Kroger-family banners including Roundy's, providing OAuth 2.0
+      single sign-on for digital commerce, loyalty, and personalization APIs.
+    tags:
+      - Authentication
+      - Identity
+  - term: Oconomowoc Distribution Center
+    definition: >-
+      Roundy's/Kroger's state-of-the-art 1.1 million square foot distribution
+      center in Oconomowoc, Wisconsin serving as the primary supply hub for
+      Wisconsin Pick 'n Save and Metro Market stores.
+    tags:
+      - Logistics
+      - Supply Chain
