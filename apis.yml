@@ -106,7 +106,7 @@ common:
     url: https://developer.kroger.com/
   - type: Vocabulary
     url: vocabulary/roundys-vocabulary.yml
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/roundys-context.jsonld
   - type: JSONSchema
     url: json-schema/roundys-store-schema.json
