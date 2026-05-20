@@ -94,6 +94,8 @@ apis:
       - Loyalty
       - OAuth
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/roundys-inc
   - type: Website
     url: https://www.roundys.com
   - type: Pick n Save
