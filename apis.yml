@@ -94,6 +94,8 @@ apis:
       - Loyalty
       - OAuth
 common:
+  - type: DomainSecurity
+    url: security/roundys-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/roundys-inc
   - type: Website
