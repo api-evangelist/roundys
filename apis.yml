@@ -105,6 +105,11 @@ apis:
       - Grocery
       - Identity
       - Loyalty
+    tags_raw:
+      - Authentication
+      - Grocery
+      - Identity
+      - Loyalty
       - OAuth
 common:
   - type: DomainSecurity
