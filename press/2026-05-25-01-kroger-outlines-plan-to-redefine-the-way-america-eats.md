@@ -1,7 +1,9 @@
 ---
 title: Kroger Outlines Plan to Redefine the Way America Eats ...
 url: https://www.prnewswire.com/news-releases/kroger-outlines-plan-to-redefine-the-way-america-eats-and-to-deliver-value-for-customers--shareholders-300534819.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Roundy''s" press release artificial intelligence'
 position: 1
 source: serpapi-google

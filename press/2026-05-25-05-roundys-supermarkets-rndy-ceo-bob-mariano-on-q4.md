@@ -1,7 +1,9 @@
 ---
 title: Roundy's Supermarkets (RNDY) CEO Bob Mariano on Q4 ...
 url: https://seekingalpha.com/article/2974396-roundys-supermarkets-rndy-ceo-bob-mariano-on-q4-2014-results-earnings-call-transcript
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Roundy''s" press release artificial intelligence'
 position: 5
 source: serpapi-google
