@@ -123,6 +123,12 @@ apis:
       - Loyalty
       - OAuth
 common:
+  - type: Plans
+    url: plans/roundys-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/roundys-rate-limits.yml
+  - type: FinOps
+    url: finops/roundys-finops.yml
   - type: DomainSecurity
     url: security/roundys-domain-security.yml
   - type: LinkedIn
