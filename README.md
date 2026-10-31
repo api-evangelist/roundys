@@ -1,4 +1,4 @@
-# Roundy's (roundys)
+# Roundy's
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,94 +64,134 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Roundy's, Inc. is a Midwest grocery retailer and wholly-owned subsidiary of The Kroger Co., founded in Milwaukee, Wisconsin in 1872. Roundy's operates approximately 150 grocery stores under three retail banners: Pick 'n Save (106 Wisconsin locations), Metro Market (premium Wisconsin stores), and Mariano's (44 Chicago-area stores). As a Kroger subsidiary, Roundy's leverages the Kroger Developer Platform for product catalog, store locator, cart, and loyalty integrations.
+Roundy's, Inc. is a Midwest grocery retailer and wholly-owned subsidiary of The Kroger Co., founded in Milwaukee, Wisconsin in 1872. Roundy's operates approximately 150 grocery stores under three retail banners: Pick 'n Save (106 locations throughout Wisconsin), Metro Market (premium Wisconsin grocery stores), and Mariano's (44 Fresh Market locations throughout the Chicago area). As a Kroger subsidiary, Roundy's leverages the Kroger developer platform and technology infrastructure including the Kroger API for product catalog, digital coupons, store locations, and loyalty program integrations.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/roundys/refs/heads/main/apis.yml)
+**Areas:** Grocery · Kroger · Midwest · Retail · Supermarket · Wisconsin
 
-## Scope
+## Roundy's on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Roundy's is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/roundys/](https://apis.io/providers/roundys/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (4)
 
- - Grocery, Kroger, Midwest, Retail, Supermarket, Wisconsin
+- [Kroger Product Catalog API](https://apis.io/apis/roundys/kroger-product-catalog-api/) — As a Kroger subsidiary, Roundy's stores (Pick 'n Save, Metro Market, Mariano's) are accessible through the Kroger Developer Platform product catalog API.…
+- [Kroger Store Locator API](https://apis.io/apis/roundys/kroger-stores-api/) — The Kroger Store Locator API allows developers to find Pick 'n Save, Metro Market, and Mariano's store locations by geographic coordinates, ZIP code, or…
+- [Kroger Cart and Checkout API](https://apis.io/apis/roundys/kroger-cart-api/) — The Kroger Cart API allows authenticated customers to add items directly to their Pick 'n Save, Metro Market, or Mariano's shopping cart for in-store pickup…
+- [Kroger Identity and Loyalty API](https://apis.io/apis/roundys/kroger-identity-api/) — The Kroger Identity API provides OAuth 2.0-based authentication for Kroger customers including Roundy's banner shoppers, enabling access to customer…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-05-02
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### JSON Schema (1)
 
-### Kroger Product Catalog API
-As a Kroger subsidiary, Roundy's stores are accessible through the Kroger Developer Platform product catalog API for searching products, retrieving pricing, and checking availability at Pick 'n Save, Metro Market, and Mariano's locations.
+The data models the API reads and writes.
 
-**Human URL:** [https://developer.kroger.com/reference/](https://developer.kroger.com/reference/)
+- [Roundy's Store Data Schema](https://apis.io/schemas/roundys/roundys-store/)
 
-#### Tags:
+#### JSON Structure (1)
 
- - Grocery, Inventory, Product Catalog, Retail
+Data models expressed in JSON Structure.
 
-#### Properties
+- [Roundys Store Structure](https://apis.io/json-structure/roundys/roundys-store-structure/)
 
-- [Documentation](https://developer.kroger.com/reference/)
-- [OpenAPI](https://developer.kroger.com/assets/files/Kroger-API-Spec-23c0b0b34f55c3d32d60fcb23de33a86.yaml)
+#### JSON-LD (1)
 
-### Kroger Store Locator API
-Find Pick 'n Save, Metro Market, and Mariano's store locations by geography, with store details including address, hours, departments, phone, and available services.
+Linked-data contexts for the provider's vocabulary.
 
-**Human URL:** [https://developer.kroger.com/reference/](https://developer.kroger.com/reference/)
+- [Roundys Context](https://apis.io/jsonld/roundys/roundys-context/)
 
-#### Tags:
+#### Vocabulary (1)
 
- - Grocery, Location, Retail, Store Locator
+The provider's domain terms, defined.
 
-#### Properties
+- [Roundy's Vocabulary](https://apis.io/vocabularies/roundys/roundys-vocabulary/)
 
-- [Documentation](https://developer.kroger.com/reference/)
+#### Governance rules (1)
 
-### Kroger Cart and Checkout API
-Add items to Pick 'n Save, Metro Market, or Mariano's shopping carts for pickup or delivery through the Kroger cart integration.
+Spectral rulesets for the provider's contracts.
 
-**Human URL:** [https://developer.kroger.com/reference/](https://developer.kroger.com/reference/)
+- [Roundy's — jsonschema rules](https://apis.io/rules/roundys/roundys-jsonschema-spectral-rules/)
 
-#### Tags:
+#### Security (1)
 
- - Cart, Checkout, Grocery, Retail, Shopping
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Roundys Domain Security](https://apis.io/security/roundys/roundys-domain-security/)
 
-- [Documentation](https://developer.kroger.com/reference/)
+#### Plans and pricing (1)
 
-### Kroger Identity and Loyalty API
-OAuth 2.0 authentication for Kroger customers including Roundy's shoppers, with access to Plus Card loyalty data, digital coupons, purchase history, and personalized offers.
+Published plans, tiers and prices.
 
-**Human URL:** [https://developer.kroger.com/reference/](https://developer.kroger.com/reference/)
+- [Roundys Plans Pricing](https://apis.io/plans/roundys/roundys-plans-pricing/)
 
-#### Tags:
+#### Rate limits (1)
 
- - Authentication, Grocery, Identity, Loyalty, OAuth
+Published request limits.
 
-#### Properties
+- [Roundys Rate Limits](https://apis.io/rate-limits/roundys/roundys-rate-limits/)
 
-- [Documentation](https://developer.kroger.com/reference/)
+#### FinOps (1)
 
-## Common Properties
+What the API costs to run, by operation.
+
+- [Roundys Finops](https://apis.io/finops/roundys/roundys-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.roundys.com)
-- [Pick n Save](https://www.picknsave.com)
-- [Metro Market](https://www.metromarket.net)
-- [Marianos](https://www.marianos.com)
-- [Kroger Developer Platform](https://developer.kroger.com/)
-- [Vocabulary](vocabulary/roundys-vocabulary.yml)
-- [JSON-LD](json-ld/roundys-context.jsonld)
-- [JSONSchema](json-schema/roundys-store-schema.json)
-- [JSONStructure](json-structure/roundys-store-structure.json)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 19.7** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 30.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/roundys/](https://apis.io/providers/roundys/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Roundy's: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/roundys/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
